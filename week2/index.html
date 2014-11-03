@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 2 Homework: Index</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,700|Josefin+Slab:300,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="weekTwo" ng-controller="DefaultController">
+
+<header>
+    <ul>
+        <li>Home</li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
+
+<div id="ng-ctrl" ng-controller="FormController">
+
+    <form class="signup" name="signup_form">
+
+            <label name="name">Name: </label>
+            <input type="text" name="name" placeholder="Name" ng-model="user.name" required>
+            <div class="error" ng-show="signup_form.name.$error.required">Error: name is invalid.</div>
+
+            <label name="email">Your Email:</label>
+            <input type="email" name="email" ng-model="user.email" placeholder="Email Address" ng-maxlength="20">
+            <div class="error" ng-show="signup_form.email.$error.maxlength">Error: email is invalid.</div>
+
+            <label name="age">Age: </label>
+            <input type="number" name="age" ng-minlength="5" ng-model="user.age">
+            <div class="error" ng-show="signup_form.age.$error.minlength">Error: age is invalid.</div>
+
+        <input type="submit" value="Sign Up" class="btn">
+    </form>
+</div>
+
+</body>
+</html>
