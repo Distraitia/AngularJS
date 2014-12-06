@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>week2-class index</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <style>
+        /*form div { float: right; }*/
+        .error { color: red; }
+    </style>
+</head>
+<body ng-app="weekTwo" ng-controller="DefaultController">
+
+<div id="ng-ctrl" ng-controller="FormController" style="max-width:600px;margin: 0 auto;">
+
+    <!-- Control Variables
+    formName.inputFieldName.property
+    signup_form.name
+
+    Unmodified
+    signup_form.name.$prestine
+
+    Modified
+    signup_form.name.$dirty
+
+    Form is valid
+    signup_form.name.$valid
+
+    Form is invalid
+    signup_form.name.$invalid
+
+    Error on form
+    singup_form.name.$error -->
+
+    <form name="signup_form">
+        <div>
+            <label name="name">Name: </label>
+            <input type="text" name="name" placeholder="Name" ng-model="user.name" required>
+            <div class="error" ng-show="signup_form.name.$error.required">Error: name is invalid.</div>
+        </div>
+        <div>
+            <label name="email">Your Email</label>
+            <input type="email" name="email" ng-model="user.email" placeholder="Email Address" ng-maxlength="20">
+            <div class="error" ng-show="signup_form.email.$error.maxlength">Error: email is invalid.</div>
+        </div>
+        <div>
+            <label name="age">Age: </label>
+            <input type="number" name="age" ng-minlength="5" ng-model="user.age">
+            <div class="error" ng-show="signup_form.age.$error.minlength">Error: age is invalid.</div>
+        </div>
+
+        <!-- <input type="submit" value="Submit!"> -->
+    </form>
+</div>
+
+<hr>
+
+<!-- {{ foobar | uppercase | capitalOnce }} -->
+
+<hr>
+<!-- {{ myOtherData | orderBy:"name":true }} -->
+<!-- :true reverses the order, false is the default -->
+<br>
+<br>
+<!-- {{ myData | filter:'o' }} -->
+<!-- filters words with "o" in them -->
+<br>
+
+<hr>
+<!-- {{ hello | uppercase }} -->
+<!-- {{ hello }}<br> -->
+<!-- filter by 2 -->
+<!-- {{ myNumber | number:2 }}<br> -->
+<!-- filter by currency -->
+<!-- {{ myNumber | currency }}<br> -->
+
+<!-- <hr>
+
+{{ myDate | date:'short' }}<br>
+{{ myDate | date:'medium' }}<br>
+{{ myDate | date:'longDate' }}<br>
+{{ myDate | date:'fullDate' }}<br>
+{{ myDate | date:'mediumDate' }}<br>
+{{ myDate | date:'yyyy-MM-dd HH:mm:ss Z' }}<br>
+{{ myDate | date:'yyyy/MM/dd hh:mm:ss a Z' }}<br>
+{{ myDate | date:'mm/dd/y hh:mm:ss a Z' }}<br>
+<hr> -->
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+@import "mixins";
+
+body {
+  background: url(/img/horizon.jpg) no-repeat;
+  background-size: cover;
+  color: $wt;
+
+  * { box-sizing: border-box; }
+}

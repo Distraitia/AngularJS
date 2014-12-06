@@ -1,0 +1,50 @@
+/* _global.scss */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: $dark-gray;
+	@include sans-thin(16px);
+	text-align: center;
+}
+
+/* typography */
+header {
+	li, a {
+		text-decoration: none;
+	}
+	li {
+		color: $wt;
+		@include serif-thin(19px);
+
+		a { 
+			color: $light-gray;
+
+			&:hover {
+				color: $wt;
+			}
+
+			&[href="#"] {
+				color: $light-gray;
+			}
+		}
+	}
+}
+
+button.btn {
+	border-radius: 0;
+	padding: 10px 15px 8px;
+	border: 1px solid $blk;
+	@include serif-bold(16px);
+	cursor: pointer;
+
+	transition: color .2s ease-out,
+		background .2s ease-out,
+		border .2s ease-out;
+
+	&:hover {
+		background: $blk;
+		color: #ddd;
+		border-color: #ddd;
+	}
+}

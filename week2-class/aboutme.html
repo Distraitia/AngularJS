@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <style>
+        /*form div { float: right; }*/
+        .error { color: red; }
+    </style>
+</head>
+<body ng-app="weekTwo" ng-controller="DefaultController">
+
+<div id="ng-ctrl" ng-controller="FormController" style="max-width:600px;margin: 0 auto;">
+    <h1>About Me</h1>
+</div>
+
+<hr>
+
+<!-- {{ foobar | uppercase | capitalOnce }} -->
+
+<hr>
+<!-- {{ myOtherData | orderBy:"name":true }} -->
+<!-- :true reverses the order, false is the default -->
+<br>
+<br>
+{{ myData | filter:'o' }}
+<!-- filters words with "o" in them -->
+<br>
+
+<hr>
+<!-- {{ hello | uppercase }} -->
+<!-- {{ hello }}<br> -->
+<!-- filter by 2 -->
+<!-- {{ myNumber | number:2 }}<br> -->
+<!-- filter by currency -->
+<!-- {{ myNumber | currency }}<br> -->
+
+<!-- <hr>
+
+{{ myDate | date:'short' }}<br>
+{{ myDate | date:'medium' }}<br>
+{{ myDate | date:'longDate' }}<br>
+{{ myDate | date:'fullDate' }}<br>
+{{ myDate | date:'mediumDate' }}<br>
+{{ myDate | date:'yyyy-MM-dd HH:mm:ss Z' }}<br>
+{{ myDate | date:'yyyy/MM/dd hh:mm:ss a Z' }}<br>
+{{ myDate | date:'mm/dd/y hh:mm:ss a Z' }}<br>
+<hr> -->
+
+
+</body>
+</html>

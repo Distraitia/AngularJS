@@ -1,0 +1,29 @@
+<div class="home-container">
+  <h2>Welcome, friend.</h2>
+
+  <!-- Create input for new todos -->
+  <form action="" role="form" ng-submit="addTodo()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" class="form-control" placeholder="New to do item">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-success" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+
+  <!-- create a repeating P tag in my todo items -->
+  <div ui-sortable ng-model="todos">
+    <p class="input-group" ng-repeat="todo in todos" style="color: pink; cursor:move; padding: 10px 20px;">
+      <input type="text" ng-model="todo" class="form-control">
+
+      <span class="input-group-btn">
+        <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
+        <!-- <input type="submit" class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove" value="X"> -->
+      </span>
+    </p>
+  </div>
+</div>
