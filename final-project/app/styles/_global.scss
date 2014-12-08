@@ -1,0 +1,124 @@
+body {
+	background: url(/img/horizon.jpg) no-repeat $blk;
+	background-size: cover;
+	color: $grayC;
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	display: block;
+	height:auto;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+
+	font-size: 18px;
+
+	* { box-sizing: border-box; }
+}
+
+.temp-outline {
+	border: 1px solid $sand;
+}
+
+header {
+	position: relative;
+	padding: 20px;
+	border-bottom: 1px solid $sand;
+	margin-bottom: 30px;
+
+	nav {
+		/*float: right;*/
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			@include fancyFont;
+			font-size: 1em;
+		}
+
+		li + li {
+			margin-left: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			transition: color .2s ease-out;
+
+			&:hover {
+				color: $grayC;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.logo {
+	max-width: 144px;
+	margin: 0;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px;
+
+	.bg-container {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		background: url(/img/surface-desaturated.png) no-repeat;
+		background-size: cover;
+		opacity: .75;
+	}
+
+	.copyright {
+		z-index: 5;
+		position: relative;
+		color: $blk;
+	}
+}
+
+.site-container {
+	max-width: 1200px;
+	padding: 0 30px 120px;
+	/*margin-bottom: 120px;*/
+	position: relative;
+}
+
+.fancy {
+	/*font-family: 'EB Garamond', 'Lusitana', serif;*/
+	@include fancyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include fancyFont;
+	margin-top: 0;
+}
+
+img {
+	border: none;
+}

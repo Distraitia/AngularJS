@@ -1,8 +1,86 @@
-<div class="home-container">
-  <h2>Welcome, friend.</h2>
+<div class="home-container temp-outline">
+  <!-- <h2 class="fancy">Welcome, friend.</h2> -->
 
+  <div class="content-container">
+    <div class="item-img-container">
+      <img src="http://placekitten.com/g/400/300" alt="placeholder">
+    </div>
+    <div class="item-info-container">
+      <div class="fp-item-header">
+        <h3 class="item-title">Title of Item</h3>
+        <span class="author">by <a href="#">Author</a></span>
+        <span class="rating"></span>
+      </div>
+      <p class="fp-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi, quae libero reprehenderit sapiente ut est suscipit voluptatem blanditiis perspiciatis ipsa accusantium dolore quaerat esse ratione voluptate repellat ad quibusdam.</p>
+    </div>
+  </div>
+  <div class="related-items-container">
+    <h2>Customers also bought...</h2>
+    <table class="related-items">
+      <tr>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="cart-container temp-outline">
+  <h2>Your Cart</h2>
+  <hr>
+  
+  <table class="cart-items">
+    <tr>
+      <th>
+        <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+        <h4>Item Name</h4>
+        <span class="author">by <a href="#">Author</a></span>
+        <span class="rating">*****</span>
+        <span class="publisher">Publisher Name</span>
+        <span class="price">$10.00</span>
+      </th>
+      <th>
+        <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+        <h4>Item Name</h4>
+        <span class="author">by <a href="#">Author</a></span>
+        <span class="rating">*****</span>
+        <span class="publisher">Publisher Name</span>
+        <span class="price">$10.00</span>
+      </th>
+      <th>
+        <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+        <h4>Item Name</h4>
+        <span class="author">by <a href="#">Author</a></span>
+        <span class="rating">*****</span>
+        <span class="publisher">Publisher Name</span>
+        <span class="price">$10.00</span>
+      </th>
+    </tr>
+  </table>
   <!-- Create input for new todos -->
-  <form action="" role="form" ng-submit="addTodo()">
+  <!-- <form action="" role="form" ng-submit="addTodo()">
     <div class="row">
       <div class="input-group">
         <input type="text" ng-model="todo" class="form-control" placeholder="New to do item">
@@ -13,17 +91,17 @@
     </div>
   </form>
 
-  <hr>
+  <hr> -->
 
   <!-- create a repeating P tag in my todo items -->
-  <div ui-sortable ng-model="todos">
+  <!-- <div ui-sortable ng-model="todos">
     <p class="input-group" ng-repeat="todo in todos" style="color: pink; cursor:move; padding: 10px 20px;">
       <input type="text" ng-model="todo" class="form-control">
 
       <span class="input-group-btn">
-        <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
+        <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button> -->
         <!-- <input type="submit" class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove" value="X"> -->
-      </span>
+      <!-- </span>
     </p>
-  </div>
+  </div> -->
 </div>

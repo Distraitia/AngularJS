@@ -1,0 +1,138 @@
+.home-container {
+  background: $shadow;
+  // background: $grayC;
+  padding: 30px;
+  border-radius: 10px;
+  // margin-bottom: 120px;
+
+  .item-info-container {
+    padding: 0 0 0 30px;
+  }
+
+  .content-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted $grayA;
+    @include clearfix;
+
+    & > div {
+      float: left;
+    }
+  }
+
+  .fp-item-header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted $grayA;
+  }
+
+  .item-title {
+    margin-bottom: 5px;
+  }
+}
+
+.item-img-container {
+  // max-width: 100%;
+  width: 50%;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+  }
+}
+.item-info-container {
+  // margin-left: 20px;
+  padding-left: 20px;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    .item-img-container {
+      padding-right: 20px;
+      border-right: 1px solid $grayB;
+    }
+    .item-info-container {
+      // border-left: 1px solid $grayB;
+    }
+  }
+}
+
+.related-items-container {
+  padding-top: 15px;
+}
+
+.related-items {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th span {
+    display: block;
+  }
+}
+
+.related-items td {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 0 10px;
+  overflow: hidden;
+  word-break: normal;
+  background: transparent;
+}
+
+.related-items th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0 5px;
+  overflow: hidden;
+  word-break: normal;
+  background: transparent;
+  width: calc(100% / 3 - 10px);
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  img {
+    width: 100%;
+    border: none;
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  &:first-child {
+    padding: 10px 10px 10px 0;
+  }
+
+  &:first-child + th + th {
+    padding: 10px 0 10px 10px;
+  }
+}
+.fpTable {
+  width: 100%;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      width: 100%;
+      clear: both;
+      display: block;
+
+      div {
+        float: left;
+      }
+    }
+  }
+
+  .thumb-cont {
+    max-width: 160px;
+    img {
+      max-width: 100%;
+    }
+  }
+}

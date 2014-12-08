@@ -1,0 +1,139 @@
+﻿<p class="text-info">
+    <img ng-src="../img/products/{{ product.sku }}.jpg" alt="{{ product.name }}"/>
+    {{ product.name }}: {{ product.description }}<br />
+</p>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+
+            <!-- product info -->
+            <table class="table table-bordered">
+
+                <!-- <tr class="well">
+                    <td class="tdRight" colspan="3" >
+                        <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                            <i class="icon-shopping-cart" />
+                            <b>{{ cart.getTotalCount() }}</b> items, <b>{{ cart.getTotalPrice() | currency }}</b>
+                            <span ng-show="cart.getTotalCount(product.sku) > 0"><br />this item is in the cart</span>
+                        </a>
+                    </td>
+                </tr> -->
+
+                <tr>
+                    <td class="tdRight"><b>Calories</b></td>
+                    <td class="tdCenter"><h2>{{ product.cal }}</h2></td>
+                    <td />
+                </tr>
+                <tr ng-repeat="(nutrientName, nutrientValue) in product.nutrients">
+                    <td class="tdRight"><b>{{ nutrientName }}</b></td>
+                    <td class="tdCenter"><img ng-src="img/r{{ nutrientValue }}.png" alt="{{ nutrientValue }}" /></td>
+                    <td>
+                        <b>{{ store.dvaCaption[nutrientValue] }}</b>:
+                        {{ store.dvaRange[nutrientValue] }}
+                        of the recommended daily value.
+                    </td>
+                </tr>
+
+                <tr class="well">
+                    <td class="tdRight" colspan="3" >
+                        <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                            <i class="icon-shopping-cart" />
+                            <b>{{ cart.getTotalCount() }}</b> items, <b>{{ cart.getTotxalPrice() | currency }}</b>
+                            <span ng-show="cart.getTotalCount(product.sku) > 0"><br />this item is in the cart</span>
+                        </a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- buttons -->
+        <!-- <div class="span4">
+            <button 
+                class="btn btn-block btn-success" 
+                ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                <i class="icon-shopping-cart icon-white" /> add to cart
+            </button>
+            <button 
+                class="btn btn-block btn-danger" 
+                ng-click="cart.addItem(product.sku, product.name, product.price, -10000)"
+                ng-disabled="cart.getTotalCount(product.sku) < 1">
+                <i class="icon-trash icon-white" /> remove from cart
+            </button>
+            <button 
+                class="btn btn-block" 
+                onclick="window.location.href=''">
+                <i class="icon-chevron-left" /> back to store
+            </button>
+        </div> -->
+    </div>
+</div>
+
+<div class="home-container temp-outline">
+  <!-- <h2 class="fancy">Welcome, friend.</h2> -->
+
+  <div class="content-container">
+    <div class="item-img-container">
+      <img src="http://placekitten.com/g/400/300" alt="placeholder">
+    </div>
+    <div class="item-info-container">
+      <div class="fp-item-header">
+        <h3 class="item-title">Title of Item</h3>
+        <span class="author">by <a href="#">Author</a></span>
+        <span class="rating"></span>
+      </div>
+      <p class="fp-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi, quae libero reprehenderit sapiente ut est suscipit voluptatem blanditiis perspiciatis ipsa accusantium dolore quaerat esse ratione voluptate repellat ad quibusdam.</p>
+      <!-- buttons -->
+        <div class="span4">
+            <button 
+                class="btn btn-block btn-success" 
+                ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                <i class="icon-shopping-cart icon-white" /> add to cart
+            </button>
+            <button 
+                class="btn btn-block btn-danger" 
+                ng-click="cart.addItem(product.sku, product.name, product.price, -10000)"
+                ng-disabled="cart.getTotalCount(product.sku) < 1">
+                <i class="icon-trash icon-white" /> remove from cart
+            </button>
+            <button 
+                class="btn btn-block" 
+                onclick="window.location.href=''">
+                <i class="icon-chevron-left" /> back to store
+            </button>
+        </div>
+    </div>
+  </div>
+  <div class="related-items-container">
+    <h2>Customers also bought...</h2>
+    <table class="related-items">
+      <tr>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+        <th>
+          <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">
+          <h4>Item Name</h4>
+          <span class="author">by <a href="#">Author</a></span>
+          <span class="rating">*****</span>
+          <span class="publisher">Publisher Name</span>
+          <span class="price">$10.00</span>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>
