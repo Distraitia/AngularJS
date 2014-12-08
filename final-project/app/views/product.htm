@@ -116,6 +116,19 @@
           <span class="rating">*****</span>
           <span class="publisher">Publisher Name</span>
           <span class="price">$10.00</span>
+          <li ng-repeat="product in store.fpProducts | orderBy:'name'" >
+            <div class="tdCenter thumb-cont">
+                <img ng-src="img/products/{{ product.thumb }}.jpg" alt="{{ product.name }}" />
+                <img ng-src="img/products/{{ product.sku }}.jpg" alt="{{ product.name }}" />
+            </div>
+            <div class="fp-description-cont">
+                <a href="#/products/{{ product.sku }}"><b>{{ product.name }}</b></a><br />
+                {{ product.description }}
+            </div>
+            <div class="tdRight price-cont">
+                {{ product.price | currency }}
+            </div>
+        </li>
         </th>
         <th>
           <img src="http://placekitten.com/g/140/120" alt="placeholder" class="fp-thumbnail">

@@ -4,12 +4,6 @@
 <nav class="pull-right">
 	<ul>
 		<li class="active"><a ng-href="#">Home</a></li>
-		<li><a ng-href="#/cart"><span class="fp-icon-cart"></span> Cart</a></li>
-		<li>
-			<a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                <i class="fp-icon-cart" />
-                <b>{{cart.getTotalCount()}}1</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-            </a>
-        </li>
+		<li><a ng-href="#/cart"><span class="fp-icon-cart"></span> View Cart</a></li>
 	</ul>
 </nav>

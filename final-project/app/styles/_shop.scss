@@ -1,4 +1,5 @@
-.home-container {
+.home-container,
+.fpTable {
   background: $shadow;
   // background: $grayC;
   padding: 30px;
@@ -45,6 +46,46 @@
   // margin-left: 20px;
   padding-left: 20px;
   width: 50%;
+}
+
+.fpTable {
+  @include clearfix;
+  li,
+  li > div {
+    display: block;
+  }
+  .thumb-cont {
+    width: 16%;
+
+  }
+  .fp-description-cont {
+    width: 50%;
+    padding-left: 10px;
+  }
+  .price-cont,
+  .cart-add-cont {
+    width: 17%;
+  }
+
+  li:first-child {
+    padding: 0 0 10px;
+  }
+  li {
+    @include clearfix;
+
+    a {
+      text-decoration: none;
+      transition: color .2s ease-out;
+      
+      &:hover {
+        color: $wt;
+      }
+    }
+  }
+  li + li {
+    padding: 10px 0 10px;
+    border-top: 1px solid $sand;
+  }
 }
 
 @media screen and (min-width: 768px) {

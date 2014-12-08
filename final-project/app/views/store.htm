@@ -7,19 +7,25 @@
 <!-- <p>
     Search: <input ng-model="search">
 </p> -->
-<div class="fpTable fpTable-bordered">
+<div class="fpTable fpTable-bordered temp-outline">
     <ul>
-        <li ng-repeat="product in store.fpProducts | orderBy:'name'" >
+        <li ng-repeat="product in store.fpProducts" >
             <div class="tdCenter thumb-cont">
-                <img ng-src="img/products/{{ product.thumb }}.jpg" alt="{{ product.name }}" />
+                <!-- <img ng-src="img/products/{{ product.thumb }}.jpg" alt="{{ product.name }}" /> -->
                 <img ng-src="img/products/{{ product.sku }}.jpg" alt="{{ product.name }}" />
             </div>
             <div class="fp-description-cont">
-                <a href="#/products/{{ product.sku }}"><b>{{ product.name }}</b></a><br />
-                {{ product.description }}
+                <a href="#/products/{{ product.sku }}"><b>{{ product.thumb }}</b></a><br />
+                {{ product.name }}
             </div>
             <div class="tdRight price-cont">
-                {{ product.price | currency }}
+                {{ product.price }}
+            </div>
+
+            <div class="tdCenter cart-add-cont">
+                <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                    add to cart
+                </a>
             </div>
         </li>
     </ul>
