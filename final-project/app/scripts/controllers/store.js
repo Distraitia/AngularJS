@@ -89,7 +89,7 @@ function store() {
         'above 40%'
     ];
     this.fpProducts = [
-        new product(
+        new fpProduct(
             'CWG1',
             'CwG-Book1.jpg',
             'Conversations with God: Book 1',
@@ -101,20 +101,32 @@ function store() {
             '$17.99',
             '$10.99'
         ),
-        new product(
+        new fpProduct(
             'CWG2',
             'CwG-Book2.jpg',
             'Conversations with God: Book 2',
+            'Kindle',
+            '*****',
+            'Auto-delivered wirelessly',
+            'offered by Penguin Group (USA) LLC.',
+            'description',
+            '$17.99',
             '$9.99'
         ),
-        new product(
+        new fpProduct(
             'CWG3',
             'CwG-Book3.jpg',
             'Conversations with God: Book 3',
+            'Kindle',
+            '*****',
+            'Auto-delivered wirelessly',
+            'offered by Penguin Group (USA) LLC.',
+            'description',
+            '$17.99',
             '$9.99'
         ),
-        // new product('sku', 'thumb', 'name', 'format', 'rating', 'status', 'publisher', 'description', 'price'),
-        new product(
+        // new fpProduct('sku', 'thumb', 'name', 'format', 'rating', 'status', 'publisher', 'description', 'price', 'memberPrice'),
+        new fpProduct(
             'CWG1',
             'CwG-Book1.jpg',
             'Conversations with God: Book 1',

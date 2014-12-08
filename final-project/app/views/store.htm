@@ -9,10 +9,18 @@
 </p> -->
 <div class="fpTable fpTable-bordered temp-outline">
     <ul>
+        <div class="well">
+            <div class="tdRight" colspan="4" >
+                <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <i class="icon-shopping-cart" />
+                    <b>{{ cart.getTotalCount() }}</b> items, <b>{{ cart.getTotalPrice() | currency }}</b>
+                </a>
+            </div>
+        </div>
         <li ng-repeat="product in store.fpProducts" >
             <div class="tdCenter thumb-cont">
                 <!-- <img ng-src="img/products/{{ product.thumb }}.jpg" alt="{{ product.name }}" /> -->
-                <img ng-src="img/products/{{ product.sku }}.jpg" alt="{{ product.name }}" />
+                <img ng-src="img/products/{{ product.sku }}" alt="{{ product.name }}" />
             </div>
             <div class="fp-description-cont">
                 <a href="#/products/{{ product.sku }}"><b>{{ product.thumb }}</b></a><br />
