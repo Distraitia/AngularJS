@@ -39,7 +39,7 @@
     </ul>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-bordered fpTable">
     <tr class="well">
         <td class="tdRight" colspan="4" >
             <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
@@ -66,7 +66,7 @@
 
     <!-- new stuff -->
     <tr ng-repeat="product in store.fpProducts | orderBy:'name'" >
-        <td class="tdCenter"><img ng-src="img/{{ product.thumb }}.jpg" alt="{{ product.name }}" /></td>
+        <td class="tdCenter"><img ng-src="img/{{ product.thumb }}" alt="{{ product.name }}" /></td>
         <td>
             <a href="#/products/{{ product.thumb }}"><b>{{ product.name }}</b></a><br />
             {{ product.description }}

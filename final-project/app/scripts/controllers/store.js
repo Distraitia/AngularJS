@@ -125,19 +125,7 @@ function store() {
             '$17.99',
             '$9.99'
         ),
-        // new fpProduct('sku', 'thumb', 'name', 'format', 'rating', 'status', 'publisher', 'description', 'price', 'memberPrice'),
-        new fpProduct(
-            'CWG1',
-            'CwG-Book1.jpg',
-            'Conversations with God: Book 1',
-            'Kindle',
-            '*****',
-            'Auto-delivered wirelessly',
-            'offered by Penguin Group (USA) LLC.',
-            'description',
-            '$17.99',
-            '$10.99'
-        )
+        // new fpProduct('sku', 'thumb', 'name', 'format', 'rating', 'status', 'publisher', 'description', 'price', 'memberPrice')
     ];
     this.fpCaption = [
         'Thumbnail',
